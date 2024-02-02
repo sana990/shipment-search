@@ -1,0 +1,41 @@
+<div class="shipments-container">
+  <div *ngFor="let item of filteredData"> 
+    <!-- Display the Shipment array as an array of objects -->
+    <!-- <input type="text" [(ngModel)]="searchTerm" placeholder="Search...">
+    <button (click)="filterData()" ms-5>serached </button> -->
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+          <div class="col-md-6">
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" type="text" [(ngModel)]="searchTerm" placeholder="Search..." aria-label="Search" aria-describedby="searchButton">
+                  <button class="btn btn-primary" type="button" id="searchButton" (click)="filterData()">Search</button>
+              </div>
+          </div>
+      </div>
+  </div>
+    <div *ngFor="let shipment of item.value.Shipment">
+      <div class="container">
+        <a class="shipmentdetails" (click)="viewDetails(shipment. AssignedToUserId )">
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <p>OrderNo: {{ shipment.OrderNo }}</p>
+            <p>Total products: {{shipment.ShipmentLines.TotalNumberOfRecords}}</p>
+            <p>Shipment#: {{ shipment.ScacAndService }}</p>
+          </div>
+          <div class="col-4">
+            <p>Status: {{ shipment.Status }}</p>
+            <p>Assigned to user id: {{shipment.AssignedToUserId}}</p>
+            <p>Expected pickup date: {{shipment.ExpectedShipmentDate}}</p>
+          </div>
+          <div class="col-4">
+            <p>Customer Details</p>
+            <p>{{ shipment.BillToAddress.FirstName }} {{ shipment.BillToAddress.LastName }}</p>
+            <p>{{ shipment.BillToAddress.DayPhone }}</p>
+            <p>{{ shipment.BillToAddress.EMailID }}</p>
+          </div>
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+</div>

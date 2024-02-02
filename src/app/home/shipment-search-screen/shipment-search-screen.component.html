@@ -1,0 +1,48 @@
+  <div class="container mt-2">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <h1>What do you want to do</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-2">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="form-box">
+          <h2 class="text-center mb-4">Shipment Search</h2>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control "  id="orderNo" name="orderNo"  placeholder="Order#">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control mt-3" id="shipmentNo" name="shipmentNo"  placeholder="Shipment#">
+            </div>
+            <div class="form-group">
+             
+              <input type="text" class="form-control mt-3" id="firstName" name="firstName"  placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control mt-3"  id="lastName"  name="lastName" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control mt-3" id="email" name="email"  placeholder="Email ID">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control mt-3" id="phone" name="phone"  placeholder="Phone Number">
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                  <!-- Your search button -->
+                  <button type="submit" class="btn btn-primary btn-block" (click)="onsearch()">Search</button>
+                 
+                </div>
+                <div class="col">
+                  <!-- Your cancel button -->
+                  <button type="button" class="btn btn-secondary btn-block ml-auto">Reset</button>
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
